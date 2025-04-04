@@ -1,0 +1,193 @@
+/* Reset and Basic Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Smooth Transitions */
+}
+
+/* General Container Styling */
+.container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Header Styles */
+header {
+    padding: 40px 0;
+    text-align: center;
+    transition: all 0.3s ease;
+    /* Smooth Transitions */
+}
+
+header h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Subtle Shadow */
+    transition: color 0.3s ease;
+    /* Smooth Transitions */
+}
+
+/* Contact Information Styles */
+.contact-info {
+    font-size: 1.2em;
+    margin-top: 20px;
+    transition: color 0.3s ease;
+    /* Smooth Transitions */
+}
+
+.contact-info a {
+    color: inherit;
+    /* Inherit color from parent */
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+    /* Smooth Transitions */
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+    /* Hover Color */
+}
+
+/* Main Content Area */
+main {
+    padding: 40px 0;
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #eee;
+}
+
+.section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Section Title Styles */
+.section h2 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    transition: color 0.3s ease;
+    /* Smooth Transitions */
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    border-radius: 2px;
+}
+
+/* Education Item Styles */
+.education-item {
+    margin-bottom: 25px;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Education Title - Clickable */
+.education-item h3 {
+    font-size: 1.6em;
+    margin-bottom: 12px;
+    color: var(--tertiary-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.education-item h3:hover {
+    color: darken(var(--tertiary-color), 10%);
+}
+
+/* Education Details - Initially Hidden */
+.education-details {
+    display: none;
+    color: #555;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+/* Skill List Styles */
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skill-list li {
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 1em;
+    text-align: center;
+    transition: all 0.3s ease;
+    /* Smooth Transitions */
+}
+
+.skill-list li:hover {
+    transform: scale(1.1);
+    /* Scale on Hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Shadow on Hover */
+}
+
+/* Projects and Interests List Styles */
+.section ul {
+    padding-left: 30px;
+}
+
+.section ul li {
+    margin-bottom: 12px;
+    font-size: 1.1em;
+    line-height: 1.4;
+    position: relative;
+    padding-left: 25px;
+}
+
+.section ul li::before {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    font-size: 0.8em;
+    /* Adjust icon size */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #fff;
+    margin-top: 40px;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    /* Smooth Transitions */
+}

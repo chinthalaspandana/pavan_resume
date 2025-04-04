@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinthala Pavan - Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* --- Custom Styles --- */
+
+        /* Colorful Accent */
+        :root {
+            --primary-color: #4CAF50;
+            /* Green */
+            --secondary-color: #FFC107;
+            /* Amber */
+            --tertiary-color: #2196F3;
+            /* Blue */
+            --background-color: #F0F4C3;
+            /* Light Lime */
+            --text-color: #333;
+            /* Dark Gray */
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        /* Header - Animated Gradient */
+        header {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 0 0 15px 15px;
+            animation: gradientShift 5s infinite alternate;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* Education Section */
+        .education-item {
+            margin-bottom: 25px;
+            background-color: #f8f8f8;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .education-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Education Title - Clickable */
+        .education-item h3 {
+            font-size: 1.6em;
+            margin-bottom: 12px;
+            color: var(--tertiary-color);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .education-item h3:hover {
+            color: darken(var(--tertiary-color), 10%);
+        }
+
+        /* Education Details - Initially Hidden */
+        .education-details {
+            display: none;
+            color: #555;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+        }
+
+        /* Skills Section - Colorful Badges */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* Center skills horizontally */
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            /* Center skill items */
+        }
+
+        .skill-list li {
+            margin-bottom: 8px;
+            padding: 10px 15px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            text-align: center;
+            color: #fff;
+            background-color: var(--primary-color);
+            /* Default skill color */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            transform: scale(1);
+        }
+
+        .skill-list li:nth-child(even) {
+            background-color: var(--secondary-color);
+            /* Alternate color */
+        }
+
+        .skill-list li:nth-child(3n) {
+            background-color: var(--tertiary-color);
+            /* Another alternate */
+        }
+
+        .skill-list li:hover {
+            background-color: darken(var(--primary-color), 10%);
+            transform: scale(1.1);
+        }
+
+        /* Projects Section - Highlighted List */
+        .section ul {
+            padding-left: 30px;
+        }
+
+        .section ul li {
+            margin-bottom: 12px;
+            font-size: 1.1em;
+            line-height: 1.4;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .section ul li::before {
+            content: '\f0da';
+            /* Font Awesome arrow */
+            font-family: FontAwesome;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--primary-color);
+        }
+
+        /* Footer - Modern Design */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: var(--text-color);
+            color: #fff;
+            margin-top: 40px;
+            border-radius: 15px 15px 0 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Chinthala Pavan</h1>
+        <p class="contact-info">
+            Hyderabad |
+            <a href="tel:8309350117">8309350117</a> |
+            <a href="mailto:pavangoud2801@gmail.com">pavangoud2801@gmail.com</a>
+        </p>
+    </header>
+
+    <main>
+        <section class="section summary">
+            <h2>Summary</h2>
+            <p>To be part of an organization where an opportunity is given to improvise and implement my skill set to
+                contribute for the growth of the organization, to achieve the assigned targets with sheer
+                determination, dedication and hard work.</p>
+        </section>
+
+        <section class="section education">
+            <h2>Education</h2>
+
+            <div class="education-item">
+                <h3 onclick="toggleEducationDetails('cmr-details')">CMR Technical Campus, HYDERABAD</h3>
+                <div class="education-details" id="cmr-details">
+                    <p>BTECH (CSE-AI&ML)</p>
+                    <p>2022-2026</p>
+                    <p>CGPA – 6.9 (up to date)</p>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <h3 onclick="toggleEducationDetails('narayana-details')">Narayana Junior College, HYDERABAD</h3>
+                <div class="education-details" id="narayana-details">
+                    <p>INTERMEDIATE (MPC)</p>
+                    <p>2020-2022</p>
+                    <p>Percentage – 88%</p>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <h3 onclick="toggleEducationDetails('ideal-details')">IDEAL HIGH SCHOOL, TOOPRAN</h3>
+                <div class="education-details" id="ideal-details">
+                    <p>SSC</p>
+                    <p>2019-2020</p>
+                    <p>CGPA – 8.5</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>Missing child identification system</li>
+            </ul>
+        </section>
+
+        <section class="section skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div>
+                    <h3>Professional Skills</h3>
+                    <ul class="skill-list">
+                        <li>C</li>
+                        <li>PYTHON</li>
+                        <li>MY SQL</li>
+                        <li>HTML</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Personal Skills</h3>
+                    <ul class="skill-list">
+                        <li>GOOD VERBAL</li>
+                        <li>QUICK GRASPER</li>
+                        <li>TEAM WORK</li>
+                        <li>ENTHUSIASTIC AT LEARNING NEW CONCEPTS</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section interests">
+            <h2>Areas of Interest</h2>
+            <ul>
+                <li>Develop & testing of applications in the domain where AI & ML plays a key role.</li>
+                <li>Front end development</li>
+            </ul>
+        </section>
+
+        <section class="section certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>BASICS OF PYTHON – [INFOSYS SPRING BOARD] Jan - 2024</li>
+                <li>GOOGLE CLOUD CAREER LAUNCHPAD DATA ANALYST TRACK– [COURSERA] Aug - 2024</li>
+            </ul>
+        </section>
+
+        <section class="section declaration">
+            <h2>Declaration</h2>
+            <p>I hereby declare that all the information furnished above are true to the best of my knowledge.</p>
+            <p>Chinthala Pavan</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Chinthala Pavan</p>
+    </footer>
+
+    <script>
+        function toggleEducationDetails(detailsId) {
+            const details = document.getElementById(detailsId);
+            details.style.display = (details.style.display === 'block' ? 'none' : 'block');
+        }
+    </script>
+
+</body>
+
+</html>
